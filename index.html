@@ -1,1 +1,270 @@
-<h1>Shivam HR Solutions</h1><p>Website coming soon.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1F3F66">
+<meta name="description" content="Shivam HR Solutions: payroll, PF and ESI compliance, PF claims and HR support from an HR professional with 2.5+ years of experience.">
+<title>Shivam HR Solutions</title>
+<link rel="icon" type="image/png" href="shivam-hr-monogram.png">
+<style>
+:root{--navy:#1F3F66;--gold:#E0A526;--ink:#24364B;--mist:#F3F7FB;--line:#D9E3EE}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden}
+body{font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6;font-size:16px;overflow-wrap:break-word}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--navy);line-height:1.2;margin:0}
+a{color:var(--navy)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 14px}
+header img{height:46px;width:auto;max-width:62vw;display:block}
+nav{display:flex;align-items:center;gap:16px}
+nav a{text-decoration:none;font-weight:700;font-size:15px}
+.btn{display:inline-block;padding:11px 18px;border-radius:8px;font:700 15px "Trebuchet MS",Arial,sans-serif;text-decoration:none;border:2px solid var(--navy);cursor:pointer;text-align:center;line-height:1.25}
+.btn.fill{background:var(--navy);color:#fff}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#1a2a3d}
+.btn.line{background:#fff;color:var(--navy)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+section{padding:34px 0}
+h2{font-size:26px;margin-bottom:6px}
+.sub{margin:0 0 18px;max-width:620px}
+.alt{background:var(--mist)}
+.hero{background:var(--mist);padding:26px 0}
+.hero .wrap{display:grid;gap:22px;grid-template-columns:1fr}
+.hero h1{font-size:clamp(26px,7vw,44px)}
+.hero p{font-size:17px;margin:12px 0 0;max-width:540px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.month{background:#fff;border:2px solid var(--navy);border-radius:10px;padding:16px}
+.month h3{font-size:19px;margin-bottom:6px}
+ul.tl{list-style:none;margin:0;padding:0}
+ul.tl li{display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line)}
+ul.tl li:first-child{border-top:0}
+.tick{flex:none;width:22px;height:22px;border-radius:50%;background:var(--gold);position:relative;margin-top:2px}
+.tick::after{content:"";position:absolute;left:7px;top:3px;width:6px;height:11px;border:solid #1a2a3d;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.cards,.svc{display:grid;gap:14px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.card h3{font-size:19px}
+.card p{margin:0}
+.card .btn{margin-top:auto;align-self:flex-start}
+.svc div{border-left:4px solid var(--gold);padding:4px 0 4px 14px}
+.svc h3{font-size:18px;margin-bottom:2px}
+.svc p{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px;padding:0;list-style:none}
+.tags li{background:#fff;border:1px solid var(--line);border-radius:6px;padding:4px 12px;font-size:14px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;grid-template-columns:1fr;counter-reset:s}
+.steps li{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 14px 14px 58px;position:relative;font-weight:700;color:var(--navy)}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:var(--gold);color:#1a2a3d;display:grid;place-items:center;font-weight:800}
+.reach{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-bottom:18px}
+form{display:grid;gap:12px;max-width:580px;position:relative}
+label{font-weight:700;font-size:14px;display:block;margin-bottom:3px}
+.req{color:#B3261E}
+input,select,textarea{width:100%;padding:11px;border:1px solid #AFC0D2;border-radius:8px;font:inherit;background:#fff}
+.count{font-size:13px;color:#5A6B7F;margin-top:3px}
+.err{color:#B3261E;font-size:14px;min-height:20px;margin:0}
+button.btn{justify-self:start}
+#msg{min-height:22px;font-weight:700;color:var(--navy);margin:0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+footer{background:var(--navy);color:#fff;padding:24px 0 16px;font-size:15px}
+footer a{color:var(--gold)}
+.foot{display:grid;gap:10px;justify-items:start}
+.foot .btn{background:var(--gold);border-color:var(--gold);color:#1a2a3d}
+.copy{text-align:center;margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.25);font-size:14px}
+@media(min-width:760px){
+section{padding:50px 0}.hero{padding:46px 0}
+header img{height:54px}
+.hero .wrap{grid-template-columns:1.2fr 1fr;align-items:center}
+.cards.c3{grid-template-columns:repeat(3,1fr)}
+.svc{grid-template-columns:1fr 1fr;gap:16px 36px}
+.steps{grid-template-columns:repeat(4,1fr)}
+.steps li{padding:56px 14px 14px}
+.steps li::before{left:14px;top:14px;transform:none}
+}
+@media(max-width:600px){nav a:not(.btn){display:none}.btn{padding:10px 14px}}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<header>
+  <a href="#top" aria-label="Shivam HR Solutions home"><img src="shivam-hr-logo-horizontal.png" alt="Shivam HR Solutions"></a>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a class="btn gold" href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>HR, Payroll &amp; Compliance Support</h1>
+        <p>With 2.5+ years of hands-on HR experience, I support businesses with payroll, statutory compliance, HR operations and employee processes.</p>
+        <div class="cta">
+          <a class="btn fill" href="#contact" data-svc="HR Consulting">Get a Quote</a>
+          <a class="btn line" href="#contact" data-svc="Job / Career Opportunity">Hire Shivam</a>
+          <a class="btn gold wa" href="#" target="_blank" rel="noopener">WhatsApp Me</a>
+        </div>
+      </div>
+      <div class="month">
+        <h3>Every month, handled</h3>
+        <ul class="tl">
+          <li><span class="tick"></span>Salary processing and payslips</li>
+          <li><span class="tick"></span>EPF and ESI challans</li>
+          <li><span class="tick"></span>PT and LWF returns</li>
+          <li><span class="tick"></span>TDS and Form 16 support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>How I Can Work With You</h2>
+      <p class="sub">Whether you are hiring or need support, here is where we can start.</p>
+      <div class="cards c3">
+        <div class="card"><h3>Full-time HR Opportunity</h3><p>Looking for an experienced HR professional for your team?</p><a class="btn fill" href="#contact" data-svc="Job / Career Opportunity">Hire Shivam</a></div>
+        <div class="card"><h3>Freelance / Contract Support</h3><p>Need support with payroll, compliance or HR operations without hiring full-time?</p><a class="btn fill" href="#contact" data-svc="Freelance / Contract HR Work">Let's Discuss</a></div>
+        <div class="card"><h3>HR &amp; Payroll Services</h3><p>Need help with a specific HR or payroll requirement?</p><a class="btn fill" href="#contact" data-svc="Payroll Outsourcing">Get a Quote</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="alt">
+    <div class="wrap">
+      <h2>What I Do</h2>
+      <p class="sub">Pick one service or combine what you need.</p>
+      <div class="svc">
+        <div><h3>Payroll Outsourcing</h3><p>Attendance to payslips, with salary processed accurately every month.</p></div>
+        <div><h3>PF &amp; ESI Registration / Compliance</h3><p>PF and ESI registration support and challan preparation, with records kept in order.</p></div>
+        <div><h3>PF Claims &amp; UAN Support</h3><p>Claim settlement, transfer claims, KYC corrections and joint declarations.</p></div>
+        <div><h3>HR Consulting</h3><p>HR policies, employee records and process setup for growing teams.</p></div>
+        <div><h3>Recruitment Support</h3><p>Sourcing and screening candidates for the roles you need to fill.</p></div>
+        <div><h3>Digital Onboarding Forms</h3><p>Paperless joining forms that collect employee details and documents in one place.</p></div>
+        <div><h3>Salary &amp; PF Compliance Sheets</h3><p>Salary and PF compliance formats in Excel or Google Sheets, built to fit your company.</p></div>
+        <div><h3>Billing &amp; Attendance Formats</h3><p>Billing sheets and attendance registers in the layout you need.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About Shivam</h2>
+      <p class="sub">HR professional with 2.5+ years of hands-on experience in payroll and statutory compliance. I work with EPF, ESI, LWF and PT-related processes, employee records, HR documentation and HR software.</p>
+      <ul class="tags">
+        <li>Payroll Processing</li><li>EPF and ESI Challans</li><li>PF Claims</li><li>UAN and KYC</li><li>TDS and Form 16</li><li>PT and LWF Returns</li><li>Zoho Forms</li><li>GreytHR</li><li>MS Excel</li>
+      </ul>
+      <a class="btn fill" href="https://drive.google.com/file/d/1rvKbLdMUKOW6RiulemQvH8RRGdbsqWBh/view?usp=drivesdk" target="_blank" rel="noopener">Download Resume</a>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2>Why Work With Me</h2>
+      <ul class="tl" style="margin-top:12px">
+        <li><span class="tick"></span>2.5+ years of hands-on HR experience</li>
+        <li><span class="tick"></span>Payroll and statutory compliance exposure</li>
+        <li><span class="tick"></span>Practical HR operations experience</li>
+        <li><span class="tick"></span>Familiar with GreytHR, Zoho Forms and MS Excel</li>
+        <li><span class="tick"></span>Open to suitable HR opportunities and professional collaborations</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How It Works</h2>
+      <ol class="steps" style="margin-top:16px">
+        <li>Tell Me What You Need</li>
+        <li>Discuss Your Requirement</li>
+        <li>Choose the Right Support</li>
+        <li>Get Started</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <h2>Tell me what you need</h2>
+      <p class="sub">Send your details and I will get back to you as soon as possible.</p>
+      <div class="reach">
+        <a class="btn gold wa" href="#" target="_blank" rel="noopener">WhatsApp Me</a>
+        <a href="mailto:shivamhrsolutions3@gmail.com">shivamhrsolutions3@gmail.com</a>
+      </div>
+      <form id="enq" novalidate>
+        <input id="fw" class="hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div><label for="fn">Name <span class="req">*</span></label><input id="fn" type="text" autocomplete="name"></div>
+        <div><label for="fe">Email <span class="req">*</span></label><input id="fe" type="email" autocomplete="email"></div>
+        <div><label for="fp">Phone (optional)</label><input id="fp" type="tel" autocomplete="tel"></div>
+        <div><label for="fs">Service <span class="req">*</span></label>
+          <select id="fs">
+            <option value="">Select a service</option>
+            <option>Payroll Outsourcing</option><option>PF / ESI Compliance</option><option>PF Claims / UAN Support</option><option>HR Consulting</option><option>Recruitment Support</option><option>HR Operations Support</option><option>Freelance / Contract HR Work</option><option>Job / Career Opportunity</option><option>Other</option>
+          </select></div>
+        <div><label for="fm">Message <span class="req">*</span></label><textarea id="fm" rows="5"></textarea>
+          <div class="count" id="cnt">0 / 500 words</div></div>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn fill" type="submit">Send enquiry</button>
+        <p id="msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <strong>Shivam HR Solutions</strong>
+      <span>Email: <a href="mailto:shivamhrsolutions3@gmail.com">shivamhrsolutions3@gmail.com</a></span>
+      <a class="btn wa" href="#" target="_blank" rel="noopener">WhatsApp Me</a>
+    </div>
+    <div class="copy">&copy; 2026 Shivam HR Solutions. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+var ACCESS_KEY='4d79b595-0aa2-48b7-bae6-9ee5fa738887';
+var WA='https://wa.me/917827308209?text=Hi%20Shivam%2C%20I%20came%20across%20your%20website%20and%20would%20like%20to%20discuss%20an%20HR%2FPayroll%20opportunity%20or%20collaboration.%20Please%20let%20me%20know%20how%20we%20can%20connect.';
+document.querySelectorAll('.wa').forEach(function(a){a.href=WA;});
+var sel=document.getElementById('fs');
+document.querySelectorAll('a[href^="#"]:not(.wa)').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    if(a.dataset.svc){sel.value=a.dataset.svc;}
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t){t.scrollIntoView({behavior:'smooth'});}
+  });
+});
+var fm=document.getElementById('fm'),cnt=document.getElementById('cnt'),err=document.getElementById('err'),msg=document.getElementById('msg');
+function words(s){s=s.trim();return s?s.split(/\s+/).length:0;}
+function wordError(n){
+  if(n<10)return 'Please enter at least 10 words.';
+  if(n>500)return 'Please keep your message within 500 words.';
+  return '';
+}
+fm.addEventListener('input',function(){
+  var n=words(fm.value);
+  cnt.textContent=n+' / 500 words';
+  err.textContent=n>0?wordError(n):'';
+});
+var f=document.getElementById('enq');
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var d={name:fn.value.trim(),email:fe.value.trim(),phone:fp.value.trim(),service:fs.value,message:fm.value.trim(),website:fw.value};
+  var n=words(d.message);
+  if(!d.name){err.textContent='Please enter your name.';return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)){err.textContent='Please enter a valid email address.';return;}
+  if(!d.service){err.textContent='Please select a service.';return;}
+  var we=wordError(n);
+  if(we){err.textContent=we;return;}
+  err.textContent='';
+  var b=f.querySelector('button');b.disabled=true;msg.textContent='Sending...';
+  function ok(){msg.textContent='Thank you. I will get back to you as soon as possible.';f.reset();cnt.textContent='0 / 500 words';b.disabled=false;}
+  function fail(){msg.textContent='Could not send. Please email or WhatsApp me directly.';b.disabled=false;}
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+    body:JSON.stringify({access_key:ACCESS_KEY,subject:'New website enquiry: '+d.name+' ('+d.service+')',from_name:'Shivam HR Solutions Website',name:d.name,email:d.email,phone:d.phone,service:d.service,message:d.message,botcheck:d.website})})
+    .then(function(r){return r.json();})
+    .then(function(j){if(j&&j.success){ok();}else{fail();}})
+    .catch(fail);
+});
+</script>
+</body>
+</html>
